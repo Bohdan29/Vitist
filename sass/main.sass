@@ -1,0 +1,1054 @@
+$black: #171717
+$altBlack: #020101
+
+*
+	margin: 0
+	padding: 0
+
+body
+	position: relative
+	font-family: GothamPro, sans-serif
+	font-size: 15px
+	text-align: left
+	line-height: 1.67
+	color: $black
+
+h1
+	font-family: GothamPro-Black, sans-serif
+	font-size: 50px
+	font-weight: 900
+	text-align: left
+	text-transform: uppercase
+	line-height: 1.2
+	color: $altBlack
+
+h2
+	font-family: GothamPro-Black, sans-serif
+	font-size: 23px
+	font-weight: 900
+	text-align: center
+	line-height: 1.22
+	color: $black
+
+p
+	font-family: GothamPro, sans-serif
+	font-size: 15px
+	font-weight: normal
+	text-align: left
+	line-height: 1.67
+	color: $black
+
+p.price
+	font-family: GothamPro-Black, sans-serif
+	font-size: 40px
+	font-weight: 900
+	text-align: left
+	line-height: 0.55
+	color: $black
+
+p.retail
+	font-family: GothamPro, sans-serif
+	font-size: 30px
+	font-weight: normal
+	text-align: center
+	line-height: 0.73
+	color: $black
+
+	span
+		font-family: GothamPro, sans-serif
+		font-size: 15px
+		font-weight: normal
+		text-align: left
+		line-height: 1.47
+		color: $black
+
+p.sale
+	position: relative
+	font-family: GothamPro-Black, sans-serif
+	font-size: 90px
+	font-weight: 900
+	text-transform: uppercase
+	text-align: left
+	line-height: 0.72
+	color: #ebb03d
+
+	&:after
+		position: absolute
+		content: ''
+		top: 1px
+		bottom: 73px
+		right: -70px
+		width: 3px
+		height: 63px
+		border-radius: 1.5px
+		background-color: #ebb03d
+
+	span
+		position: relative
+		font-size: 41px
+		line-height: 1.3
+		color: $altBlack
+
+		&:before
+			position: absolute
+			content: ''
+			left: -80px
+			bottom: 27px
+			width: 38px
+			height: 3px
+			border-radius: 1.5px
+			background-color: #19242f
+
+a
+	text-decoration: none
+
+a.catalog-item
+	position: relative
+	font-family: GothamPro-Bold, sans-serif
+	font-size: 14px
+	font-weight: bold
+	text-align: left
+	line-height: 7.14
+	color: $black
+	transition: color .25s
+
+	&:hover
+		color: rgba(23,23,23, .6)
+
+	&:after
+		position: absolute
+		content: ''
+		top: 5px
+		right: -20px
+		width: 11px
+		height: 7px
+		background-image: url(../img/arrow-catalog.png)
+
+a.nav-item,
+p.copy,
+a.webakula
+	font-family: GothamPro, sans-serif
+	font-size: 14px
+	font-weight: normal
+	text-align: left
+	letter-spacing: 0.1px
+	line-height: 7.14
+	color: rgba(255, 255, 255, 0.5)
+
+a.nav-item,
+a.webakula
+	transition: all .25s
+
+	&:hover
+		color: #fff
+
+ul 
+	list-style: none
+
+button
+	outline: none
+
+.container
+	position: relative
+	max-width: 1300px
+	margin: 0 auto
+
+
+.cat-menu
+	display: none
+	position: absolute
+	width: 100%
+	top: 20px
+	height: 200px	
+	background-color: #fff
+	z-index: 10
+
+	.wrap 
+		display: flex
+		justify-content: space-around
+		align-items: center
+		width: 50%
+		height: 100%
+		margin: 0 auto 
+
+		li
+			a
+				font-family: GothamPro, sans-serif
+				font-size: 14px
+				font-weight: bold
+				text-align: left
+				line-height: 30px
+				color: $altBlack
+				transition: color .25s
+
+				&:hover,
+				&:active
+					color: #f2b743
+
+.tel-links-mob
+	display: none
+	flex-direction: column
+	align-items: center
+
+
+	a
+		font-family: GothamPro, sans-serif
+		font-size: 14px
+		font-weight: normal
+		text-align: left
+		line-height: 1.43
+		color: $black
+
+.navBurger
+	position: fixed !important
+	right: 2%
+	top: 34px
+	cursor: pointer
+	background: $altBlack
+	-webkit-box-sizing: border-box
+	box-sizing: border-box
+	background-clip: content-box
+	width: 20px
+	height: 25px
+	border-top: 11px solid transparent
+	border-bottom: 11px solid transparent
+	-webkit-transform: rotate(0deg)
+	transform: rotate(0deg)
+	-webkit-transition: all 0.25s ease-in-out
+	transition: all 0.25s ease-in-out
+	z-index: 1000
+	&:before, &:after
+		content: ""
+		position: absolute
+		background: $altBlack
+		border-radius: 1.5px
+		height: 3px
+		width: 100%
+		right: 0
+		will-change: rotate
+		-webkit-transform: rotate(0deg)
+		transform: rotate(0deg)
+		-webkit-transition: all 0.5s ease
+		transition: all 0.5s ease
+	&:before
+		top: -6px
+	&:after
+		bottom: -6px
+		width: 100%
+	&.active
+		background: transparent
+		background-clip: content-box
+		&:before
+			-webkit-transform: rotate(135deg)
+			transform: rotate(135deg)
+			top: 0
+			background: $altBlack
+			width: 100%
+		&:after
+			bottom: 0
+			-webkit-transform: rotate(-135deg)
+			transform: rotate(-135deg)
+			background: $altBlack
+			width: 100%
+
+.overlay
+	position: fixed !important
+	background: #ebb03d
+	top: 0
+	right: 0
+	width: 100% !important
+	height: 100vh
+	opacity: 0
+	-webkit-transform: scale(0)
+	transform: scale(0)
+	visibility: hidden
+	-webkit-transition: all 0.4s ease-in-out
+	transition: all 0.4s ease-in-out
+	overflow: hidden
+	z-index: 110
+	&.open
+		opacity: 0.99
+		visibility: visible
+		-webkit-transform: scale(1)
+		transform: scale(1)
+		li
+			display: block
+			-webkit-animation: fadeInRight 0.4s cubic-bezier(0.42, 0.83, 0.7, 1.5) forwards
+			animation: fadeInRight 0.4s cubic-bezier(0.42, 0.83, 0.7, 1.5) forwards
+			-webkit-animation-delay: 0.4s
+			animation-delay: 0.4s
+			-webkit-transform: rotate(-7deg)
+			transform: rotate(-7deg)
+			-webkit-transform-origin: right bottom
+			transform-origin: right bottom
+			&:nth-of-type(2)
+				-webkit-animation-delay: 0.5s
+				animation-delay: 0.5s
+			&:nth-of-type(3)
+				-webkit-animation-delay: 0.6s
+				animation-delay: 0.6s
+			&:nth-of-type(4)
+				-webkit-animation-delay: 0.7s
+				animation-delay: 0.7s
+			&:nth-of-type(5)
+				-webkit-animation-delay: 0.8s
+				animation-delay: 0.8s
+
+.overlayMenu
+	display: none
+	position: absolute
+	display: -webkit-box
+	display: -ms-flexbox
+	display: flex
+	-webkit-box-pack: end
+	-ms-flex-pack: end
+	justify-content: center
+	text-align: right
+	width: 100%
+	height: 100vh
+	bottom: 30vw
+
+	ul.catalog-mob
+		display: none
+
+	ul
+		-webkit-box-orient: vertical
+		-webkit-box-direction: normal
+		-ms-flex-direction: column
+		flex-direction: column
+		align-items: center
+		list-style: none
+		padding: 0
+		margin: 0 0
+		display: block
+		position: relative
+		height: 100vh
+		margin-top: 70vh
+		li
+			position: relative
+			opacity: 0
+			width: 100%
+			text-align: center
+			a
+				display: inline-block
+				color: $altBlack
+				font-family: GothamPro-Bold, sans-serif
+				font-size: 30px
+				font-weight: bold
+				text-align: center 
+				line-height: 65px
+				padding: 0px 34px 0px 34px
+				-webkit-transition: 0.2s
+				transition: 0.2s
+				&:hover, &:active, &:focus
+					-webkit-transform: translateX(-2px)
+					transform: translateX(-2px)
+					outline: none
+					background: #000
+					color: #fff
+
+.locked
+	overflow: hidden
+
+@-webkit-keyframes fadeInRight
+	0%
+		opacity: 0
+		left: 50px
+
+	100%
+		opacity: 1
+		left: 0
+		-webkit-transform: rotate(0deg)
+		transform: rotate(0deg)
+
+
+
+
+header
+	position: fixed
+	top: 0
+	width: 100%
+	height: 90px
+	background-color: #fff
+	box-shadow: -3.1px -2.6px 47.5px 2.5px rgba(2, 1, 1, 0.15)
+	z-index: 100
+
+	.container
+		display: flex
+		align-items: center		
+
+		a.logo-tablet
+			display: none
+
+		a.logo
+			margin-right: 59px
+
+		a.logo-mob
+			display: none
+
+		ul.catalog
+			display: flex
+			align-items: center
+			margin-right: 139px
+
+			li
+				margin-right: 51px
+
+				&:last-of-type 
+					margin-right: 0	
+
+					a.catalog-item
+						&:after
+							display: none  
+
+		label
+			select.currency,
+			select.lang
+				background-image: url(../img/icon-arrow-d.svg)
+				background-repeat: no-repeat
+				padding-right: 20px
+				font-family: GothamPro-Bold, sans-serif
+				font-size: 14px
+				font-weight: bold
+				text-transform: uppercase
+				text-align: left
+				line-height: 1.43
+				color: $black
+				border: none
+				outline: none
+				cursor: pointer
+				appearance: none
+				-webkit-appearance: none 
+				-moz-appearance: none
+				transition: color .25s
+
+				&:hover
+					color: rgba(23,23,23, .6)
+
+				option
+					border: none !important
+			
+			select.currency
+				margin-right: 21px
+				background-position: 36px 7px	
+				background-size: 16%
+
+			select.lang
+				background-position: 26px 7px	
+				background-size: 20%
+				margin-right: 52px
+
+		.user-wrap
+			display: flex
+			align-items: center
+			a.search	
+				margin-right: 26px		
+				.cls-1					
+					width: 22px
+					height: 21px
+					
+					transition: all .25s
+					
+				&:hover
+					.cls-1	
+						fill: rgba(0,0,0, .6)
+
+			a.user-sign
+				margin-right: 38px				
+				.cls-2					
+					width: 23px
+					height: 24px
+					transition: all .25s
+					
+
+				&:hover
+					.cls-2	
+						fill: rgba(0,0,0, .6)
+
+			a.basket	
+				position: relative
+				margin-top: -2px		
+
+				span
+					position: absolute
+					top: 11px
+					left: -8px
+					padding: 0px 6px
+					font-family: Lato, sans-serif
+					font-size: 12px
+					font-weight: 900
+					color: #000
+					background-color: #ebb03d
+					border-radius: 30px
+						
+				.cls-3					
+					width: 24px
+					height: 24px
+					transition: all .25s	
+
+				&:hover
+					.cls-3	
+						fill: rgba(0,0,0, .6)
+
+main
+	margin-top: 90px
+	section.slide
+		// height: 100vh
+		background-image: url(../img/bg-top.png)
+		background-position: center center
+		background-repeat: no-repeat
+		background-attachment: fixed
+		background-size: cover
+
+		.container
+			display: flex
+			justify-content: flex-end
+			align-items: center
+
+			&:before
+				position: absolute
+				content: ''
+				right: 18px
+				bottom: 170px
+				width: 3px
+				height: 35px
+				background-color: $black
+				border-radius: 1.5px
+
+			a.scroll-down
+				position: absolute			
+				right: 0
+				bottom: 220px
+				transform: rotate(-90deg) 
+				font-family: GothamPro-Black, sans-serif
+				font-size: 13px
+				font-weight: 900
+				text-align: left
+				color: $black
+
+			.title
+				margin-top: 270px 
+				margin-right: 7%
+				margin-bottom: 280px 
+
+				button.buy
+					width: 285px
+					height: 69px
+					margin-top: 74px
+					font-family: GothamPro-Bold, sans-serif
+					font-size: 16px
+					font-weight: bold
+					text-align: center
+					line-height: 2.5
+					color: $altBlack
+					border: 1px solid #ebb03d
+					border-radius: 34.5px					
+					background-color: #ebb03d
+					cursor: pointer
+					transition: all .2s
+
+					&:hover,
+					&:active
+						box-shadow: -11.5px -9.6px 54px 0 rgba(235, 176, 61, 0.64)
+
+	section.content
+		background-image: url(../img/bg-content.png)
+		background-position: top center
+		background-repeat: no-repeat
+		background-size: cover
+		margin-top: -4px
+		padding-bottom: 145px
+
+		.container
+			.cont-wrapp
+				display: flex
+				flex-direction: column
+				align-items: flex-end
+				
+				h1
+					padding-top: 106px
+				.wrapp-text
+					max-width: 470px
+					max-height: 350px
+					overflow-y: scroll
+					margin-top: 59px
+					margin-right: 96px					
+				
+			.product-slider
+				padding-top: 183px
+				padding-bottom: 74px
+
+				.slick-prev, 
+				.slick-next
+					top: 35% !important
+
+				.slick-list
+					max-height: 760px
+			 
+				.prod-item
+					display: flex !important
+					flex-direction: column
+					align-items: center
+					margin: 0 65px 
+					width: 310px !important
+					outline: none
+
+					img
+						margin-bottom: 53px
+
+					h2
+						margin-bottom: 32px
+
+					p.price
+						margin-bottom: 20px
+
+					p.retail
+						margin-bottom: 35px
+
+					button.buy-prod
+						position: relative
+						width: 197px
+						height: 56px
+						font-family: GothamPro-Bold, sans-serif
+						font-size: 15px
+						font-weight: bold
+						text-align: center
+						line-height: 1.33
+						color: $black
+						background-color: #f2b743
+						border: none
+						border-radius: 28px
+						cursor: pointer
+						transition: all .25s
+
+						svg
+							margin-bottom: -5px
+							margin-left: 11px
+						.cls-11
+							width: 22px
+							height: 22px
+							transition: all .25s
+
+						&:hover,
+						&:active
+							background-color: #1e1e1e
+							color: #fff
+
+							.cls-11
+								fill: #fff 
+
+			a.all-prod
+				position: relative
+				display: block
+				width: 131px
+				font-family: GothamPro, sans-serif
+				font-size: 14px
+				font-weight: normal
+				text-align: center
+				line-height: 1.43
+				color: $black
+				transition: all .25s
+				margin: 0 auto				
+
+				&:after
+					position: absolute
+					content: ''
+					width: 8px
+					height: 6px
+					top: 8px
+					right: -9px
+					background-image: url(../img/icon-arrow-d.svg)
+					transform: rotate(-90deg)
+
+				&:hover
+					text-decoration: underline
+
+footer
+	background-color: #1e1e1e
+
+	.container	
+		display: flex
+		
+
+		img.logo-footer
+			width: 100px
+			height: 60px
+			margin-top: 52px
+			margin-right: 185px
+
+		.wrapp-f
+			display: flex
+			flex-direction: column
+
+			nav.nav-footer
+				ul
+					display: flex
+					align-items: center
+
+					li
+						margin-right: 32px
+
+						&:last-of-type
+							margin-right: 0
+
+			.cont-soc
+				display: flex
+				align-items: center
+				padding-bottom: 37px
+
+				.tel-links		
+					display: flex
+					flex-direction: column
+					margin-right: 56px
+
+					a
+						font-family: GothamPro, sans-serif
+						font-size: 14px
+						font-weight: normal
+						text-align: left
+						line-height: 1.43
+						color: #fff
+						transition: color .25s
+
+						&:hover
+							color: rgba(255, 255, 255, 0.5)
+
+				button.question
+					width: 187px
+					height: 49px
+					margin-right: 58px
+					font-family: GothamPro, sans-serif
+					font-size: 15px
+					font-weight: bold
+					text-align: center
+					line-height: 1.33
+					color: $black
+					border: none
+					border-radius: 24.5px
+					background-color: #ebad38
+					transition: all .25s
+					cursor: pointer
+
+					&:hover,
+					&:active
+						background-color: #f2b743
+
+				.soc-icon
+					display: flex
+					align-items: center
+
+					a.fb,
+					a.inst
+						display: flex
+						align-items: center
+						width: 39px
+						height: 40px
+						transition: all .25s
+
+					a.fb						
+						justify-content: flex-end
+						
+						margin-right: 23px
+
+						img
+							margin-right: 6px
+							width: 14px
+							height: 26px 
+
+						&:hover
+							background-image: url(../img/fb-hover.png)
+							background-repeat: no-repeat
+							background-position: 0 0
+
+					a.inst
+						justify-content: center
+
+						img
+							width: 23px
+							height: 22px
+
+						&:hover
+							background-image: url(../img/inst-hover.png)
+							background-repeat: no-repeat
+							background-position: -1px 0
+
+	.bot-footer
+		padding-top: 27px
+		padding-bottom: 31px
+		border-top: 1px solid rgba(255,255,255, .1)
+
+		.container	
+			display: flex
+			justify-content: space-between
+			align-items: center
+
+			p.copy
+					line-height: 1
+
+			.creators
+				display: flex
+				align-items: center
+				a.webakula
+					text-decoration: underline
+					margin-right: 13px
+					line-height: 1
+
+					&:hover
+						text-decoration: none
+
+@media (max-width: 1280px)
+	header .container a.logo
+		margin-right: 20px
+		margin-left: 10px
+
+	header .container ul.catalog
+		margin-right: 25px
+
+	header .container label select.lang
+		margin-right: 5px
+
+	header .container ul.catalog li
+		margin-right: 25px
+
+	.container
+		padding: 0 4%
+
+	footer .container img.logo-footer
+		margin-right: 70px
+
+
+
+@media (max-width: 1060px)
+
+	header
+		display: flex
+		align-items: center
+
+	header .container
+		width: 100%
+		padding: 0 4%
+		justify-content: flex-end
+
+	header .container a.logo
+		display: none
+
+	header .container a.logo-tablet
+		display: block
+		margin-right: auto
+
+	header .container ul.catalog
+		display: none
+
+	header .container .user-wrap
+		margin-right: 30px
+
+	header .container label select.lang
+		margin-right: 50px
+
+	.navBurger
+		top: 30px
+
+	.overlayMenu
+		flex-direction: column-reverse
+		bottom: 0vh
+
+	.overlayMenu ul
+		margin-top: 0
+
+	.overlayMenu ul.menu
+		li
+			a
+				font-size: 18px
+				line-height: 40px
+	
+	.overlayMenu ul.catalog-mob
+		display: block
+		padding-top: 50px
+		li
+
+			&:last-of-type
+				a
+					&:after
+						display: none
+			a
+				position: relative
+				font-size: 25px
+				line-height: 50px
+
+				&:after
+					position: absolute
+					content: ''
+					top: 23px
+					right: 13px
+					width: 10px
+					height: 7px
+					background-image: url(../img/icon-arrow-d.svg)
+					background-repeat: no-repeat
+
+
+		
+
+	p.sale
+		font-size: 70px
+
+		span
+			font-size: 30px
+
+	h1
+		font-size: 35px 
+
+@media (max-width: 992px)
+
+	footer .container .wrapp-f .cont-soc
+		padding-top: 52px
+
+	.nav-footer
+		display: none
+
+@media (max-width: 768px)
+	main section.content .container .product-slider .prod-item
+		width: 100% !important
+		margin: 0 
+
+	footer
+		.container
+			flex-direction: column
+			align-items: center
+
+	footer .container img.logo-footer
+		margin-right: 0
+
+	footer .container .wrapp-f .cont-soc
+		flex-direction: column 
+		align-items: center 
+
+	footer .container .wrapp-f .cont-soc .tel-links
+		margin-bottom: 30px
+		margin-right: 0
+
+	footer .container .wrapp-f .cont-soc button.question
+		margin-bottom: 30px
+		margin-right: 0
+
+	footer .bot-footer .container p.copy
+		padding-bottom: 10px
+
+	p.sale:after
+		right: -7%
+
+@media (max-width: 600px)
+
+	main section.content .container .cont-wrapp .wrapp-text
+		margin-right: 0
+		width: 90% !important
+
+	.jspContainer
+		width: 90% !important
+
+	.jspPane
+		width: 90% !important
+
+	.slick-prev
+		left: 0 !important
+
+	.slick-next
+		right: 0 !important  
+
+@media (max-width: 500px)
+
+	main section.content .container .cont-wrapp .wrapp-text
+		margin-top: 25px
+
+	main section.slide
+		background-position: 39% 0
+ 
+	header .container .user-wrap
+		margin-right: 27px
+
+	.wrapp-lang
+		display: none
+
+	.wrapp-currency
+		position: absolute
+		top: 16px
+		right: 11% 
+
+	header .container .user-wrap a.search
+		margin-right: 8px
+
+	header .container .user-wrap a.user-sign
+		margin-right: 60px
+
+	.navBurger
+		right: 5%
+
+	.overlayMenu ul.catalog-mob
+		background-color: #1e1e1e
+		padding: 30px 0
+
+		li
+			a
+				color: #a8a8a7
+				font-size: 20px
+				line-height: 35px
+
+	.overlayMenu ul.catalog-mob li a:hover, .overlayMenu ul.catalog-mob li a:active, .overlayMenu ul.catalog-mob li a:focus
+		background: none
+
+	.overlayMenu
+		top: -5vh
+
+	.overlayMenu ul
+		height: auto
+
+	.overlayMenu ul.menu
+		margin-top: 30px
+
+	.overlayMenu ul.menu li a
+		font-size: 16px
+		line-height: 30px
+
+	.tel-links-mob
+		display: flex
+		margin-top: 30px
+
+	.logo-mob
+		display: block
+		margin: -25px auto 10px 10px
+		margin-right: auto
+
+	.overlayMenu ul.catalog-mob li a:after
+		top: 16px
+		background-image: url(../img/arrow-catalog.png)
+
+@media (max-width: 425px)
+
+	.wrapp-currency
+		right: 12%
+
+	.navBurger
+		right: 5%
+
+	h1
+		font-size: 21px
+
+	p.sale
+		font-size: 55px
+		span
+			font-size: 22px
+
+@media (max-width: 375px)
+	.navBurger
+		right: 5%
+
+	main section.slide .container .title
+		margin-right: 0
+
+	p.sale
+		font-size: 45px
+		span
+			font-size: 18px
+
+@media (max-width: 320px)
+	.wrapp-currency
+		right: 15%
